@@ -19,7 +19,7 @@ export default function RootLayout({
     
     <html lang="en">
       <Head>
-        <meta name="google-site-verification" content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"></meta>
+        <meta name="google-site-verification" content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"/>
       </Head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-VTS7QWPNQP" />
