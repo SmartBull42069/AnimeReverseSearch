@@ -2,6 +2,7 @@ import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
+import checkFile from "../action/checkFile";
 
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -30,9 +31,15 @@ export default function Upload() {
         <VisuallyHiddenInput
           type="file"
           name="image"
-          onChange={(event) => {
-            var file = event.target.files ? event.target.files[0]?.name : "";
-            setState(file);
+          onChange={async (event) => {
+            var file = event.target.files? event.target.files[0].name:""
+            var length = event.target.files ? event.target.files.length: 0;
+            var fileType = event.target.files ? event.target.files[0].type : "";
+            var size = event.target.files ? event.target.files[0].size : 0;
+            var result=await checkFile({length:length,fileType:fileType,size:size})
+            result.status==false?event.target.value="":null
+            result.status? setState(file) : setState(result.error);
+            
           }}
         />
       </Button>

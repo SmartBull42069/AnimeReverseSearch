@@ -16,8 +16,8 @@ export default async function getFiles(
   var url = "https://api.trace.moe/search?anilistInfo";
   var client_id = process.env.CLIENT_ID;
 
-  if (file.length != 1) {
-    answer.error = "Please select only 1 file";
+  if (file.length != 1 || file[0].size==0) {
+    answer.error = "Please select 1 file";
   } else if (
     file[0].type != "image/jpeg" &&
     file[0].type != "image/png" &&
@@ -26,9 +26,6 @@ export default async function getFiles(
   ) {
     answer.error = "Invalid file format";
   } 
-  else if(file[0].size>4000000){
-    answer.error="Too large size.Max file size is 4mb"
-  }
   else {
     var req = await fetch(url, {
       method: "POST",
