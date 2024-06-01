@@ -42,4 +42,5 @@ export const metadata = {
   title: "Cleithral",
   description:
     "Discover the name of any anime from a picture with our advanced image recognition tool. Quickly and accurately identify your favorite anime characters and scenes with ease. Try it now!",
+  
 };
