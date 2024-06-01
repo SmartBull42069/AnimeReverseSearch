@@ -16,7 +16,7 @@ export default async function getFiles(
   var url = "https://api.trace.moe/search?anilistInfo";
   var client_id = process.env.CLIENT_ID;
 
-  if (file.length != 1) {
+  if (file.length != 1 || file[0].size==0) {
     answer.error = "Please select 1 file";
   }
   else {
@@ -46,6 +46,6 @@ export default async function getFiles(
       .then((final) => (answer.success = final))
       .catch((err) => (answer.error = err));
   }
-
+  answer.success == undefined?answer.error="Not found":""
   return answer;
 }
