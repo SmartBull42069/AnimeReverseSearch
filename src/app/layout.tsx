@@ -33,7 +33,7 @@ export const metadata = {
   generator: "Next.js",
   applicationName: "Cleithral",
   referrer: "origin-when-cross-origin",
-  
+
   keywords: [
     "anime name finder",
     "anime picture recognition",

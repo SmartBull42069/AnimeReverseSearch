@@ -13,7 +13,7 @@ export default async function checkFile(info:{size:number,length:number,fileType
       return {
         status: false,
         error:
-          "The file size is too big; either reduce it or just take a screenshot of the scene and upload the screenshot instead.",
+          "Max file size is 4mb; either reduce it or just take a screenshot of the scene and upload the screenshot instead.",
       };
     } else if (info.size == 0) {
       return {
