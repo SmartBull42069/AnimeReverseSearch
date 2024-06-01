@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
+import Head from "next/head";
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,14 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta
           name="google-site-verification"
           content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"
         />
-      </head>
+      </Head>
       <body className={inter.className}>{children}</body>
-      <GoogleAnalytics gaId="G-VTS7QWPNQP" />
+      <GoogleAnalytics gaId="f7f45e55559dbb49498f1c59b1e5fa56c8f83e7b" />
       <Analytics />
     </html>
   );
