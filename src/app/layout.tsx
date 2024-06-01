@@ -22,24 +22,9 @@ export default function RootLayout({
           name="google-site-verification"
           content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"
         />
-        <Script
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-VTS7QWPNQP`}
-        />
-
-        <Script id="ga-script" strategy="lazyOnload">
-          {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VTS7QWPNQP', {
-      page_path: window.location.pathname,
-    });
-        `}
-        </Script>
       </Head>
       <body className={inter.className}>{children}</body>
-      
+      <GoogleAnalytics gaId="G-VTS7QWPNQP" />
       <Analytics />
     </html>
   );
