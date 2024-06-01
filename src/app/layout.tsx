@@ -14,6 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"
+        />
+      </head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-VTS7QWPNQP" />
       <Analytics />
@@ -21,6 +27,7 @@ export default function RootLayout({
   );
 }
 export const metadata = {
+  
   generator: "Next.js",
   applicationName: "Cleithral",
   referrer: "origin-when-cross-origin",
