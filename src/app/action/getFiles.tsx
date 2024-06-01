@@ -29,7 +29,10 @@ export default async function getFiles(
       .catch((err) => (answer.error = err))
       .then((data) =>
         {
-        data.result[0].similarity<4.5?answer.error="Not found.Make sure the scene is from an anime and not a anime poster,cinematic video,or fanart":""
+        data.result[0].similarity < 4.5
+          ? (answer.error =
+              "Not found. Make sure the scene is from an anime and not an anime poster, cinematic video, or fan art.")
+          : "";
         return getInfo({
           episode: data.result[0].episode,
           from: data.result[0].from,
