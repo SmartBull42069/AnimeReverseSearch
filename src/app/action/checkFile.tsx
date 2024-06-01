@@ -28,7 +28,8 @@ export default async function checkFile(info:{size:number,length:number,fileType
     ) {
       return {
         status: false,
-        error: "Invalid file format",
+        error:
+          "Invalid file format. Only MP4, JPEG, JPG, and GIF are supported.",
       };
     } else {
       return { status: true, error: undefined };

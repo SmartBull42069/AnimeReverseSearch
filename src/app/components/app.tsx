@@ -30,7 +30,7 @@ export default function InputFileUpload() {
         {currentFormState.error ? (
           <section>
             <div className="text-center">
-              <Typography variant="h1">{currentFormState.error}</Typography>
+              <Typography variant="h2">{currentFormState.error}</Typography>
             </div>
           </section>
         ) : null}
@@ -40,7 +40,7 @@ export default function InputFileUpload() {
               <Typography variant="h1" className="text-2xl	">
                 {currentFormState.success && !currentFormState.error
                   ? "Search more"
-                  : "Upload an anime scene"}
+                  : "Upload an anime scene to find the source"}
               </Typography>
               <Upload />
               <Submit />

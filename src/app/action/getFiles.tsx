@@ -28,7 +28,9 @@ export default async function getFiles(
       .then((res) => res.json())
       .catch((err) => (answer.error = err))
       .then((data) =>
-        getInfo({
+        {
+        data.result[0].similarity<4.5?answer.error="Not found.Make sure the scene is from an anime and not a anime poster,cinematic video,or fanart":""
+        return getInfo({
           episode: data.result[0].episode,
           from: data.result[0].from,
           anilist: {
@@ -41,7 +43,7 @@ export default async function getFiles(
           },
           to: data.result[0].to,
           video: data.result[0].video,
-        })
+        })}
       )
       .then((final) => (answer.success = final))
       .catch((err) => (answer.error = err));
