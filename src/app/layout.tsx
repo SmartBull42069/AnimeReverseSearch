@@ -17,12 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"
-        />
-      </Head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-VTS7QWPNQP" />
       <Analytics />
@@ -30,10 +24,10 @@ export default function RootLayout({
   );
 }
 export const metadata = {
-  
   generator: "Next.js",
   applicationName: "Cleithral",
   referrer: "origin-when-cross-origin",
+  "google-site-verification": "ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE",
   keywords: [
     "anime name finder",
     "anime picture recognition",
@@ -52,5 +46,4 @@ export const metadata = {
   title: "Cleithral",
   description:
     "Discover the name of any anime from a picture with our advanced image recognition tool. Quickly and accurately identify your favorite anime characters and scenes with ease. Try it now!",
-  
 };
