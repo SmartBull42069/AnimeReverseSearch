@@ -25,7 +25,11 @@ export default async function getFiles(
     file[0].type != "video/mp4"
   ) {
     answer.error = "Invalid file format";
-  } else {
+  } 
+  else if(file[0].size>4000000){
+    answer.error="Too large size.Max file size is 4mb"
+  }
+  else {
     var req = await fetch(url, {
       method: "POST",
       body: form,
