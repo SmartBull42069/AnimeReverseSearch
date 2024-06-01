@@ -17,7 +17,7 @@ export default function InputFileUpload() {
   return (
     <div>
       <div>
-        {currentFormState.success ? (
+        {currentFormState.success && !currentFormState.error ? (
           <section>
             <AnimeCard anime={currentFormState.success} />
           </section>
@@ -38,7 +38,7 @@ export default function InputFileUpload() {
           <form action={setFormState}>
             <div className="flex flex-none flex-col items-center m-2">
               <Typography variant="h1" className="text-2xl	">
-                {currentFormState.success
+                {currentFormState.success && !currentFormState.error
                   ? "Search more"
                   : "Upload an anime scene"}
               </Typography>

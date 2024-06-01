@@ -16,22 +16,17 @@ export default async function getFiles(
   var url = "https://api.trace.moe/search?anilistInfo";
   var client_id = process.env.CLIENT_ID;
 
-  if (file.length != 1 || file[0].size==0) {
+  if (file.length != 1) {
     answer.error = "Please select 1 file";
-  } else if (
-    file[0].type != "image/jpeg" &&
-    file[0].type != "image/png" &&
-    file[0].type != "image/gif" &&
-    file[0].type != "video/mp4"
-  ) {
-    answer.error = "Invalid file format";
-  } 
+  }
   else {
     var req = await fetch(url, {
       method: "POST",
       body: form,
     })
+      .catch((err) => (answer.error = err))
       .then((res) => res.json())
+      .catch((err) => (answer.error = err))
       .then((data) =>
         getInfo({
           episode: data.result[0].episode,
@@ -48,7 +43,8 @@ export default async function getFiles(
           video: data.result[0].video,
         })
       )
-      .then((final) => (answer.success = final));
+      .then((final) => (answer.success = final))
+      .catch((err) => (answer.error = err));
   }
 
   return answer;
