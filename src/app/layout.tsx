@@ -16,7 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
+      <Head>
+        <meta name="google-site-verification" content="ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE"></meta>
+      </Head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-VTS7QWPNQP" />
       <Analytics />
@@ -27,7 +31,7 @@ export const metadata = {
   generator: "Next.js",
   applicationName: "Cleithral",
   referrer: "origin-when-cross-origin",
-  "google-site-verification": "ziJvr7B-3LcTkKMKBU4aYBpJ6E59rGy56igetwRf6QE",
+  
   keywords: [
     "anime name finder",
     "anime picture recognition",
