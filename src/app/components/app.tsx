@@ -8,12 +8,11 @@ import AnimeCard from "./animeCard";
 import { Typography } from "@mui/material";
 import DonationDialog from "./popup";
 
-
 export default function InputFileUpload() {
   var [currentFormState, setFormState] = useFormState(getFiles, {
     error: undefined,
     success: undefined,
-  })
+  });
   return (
     <div>
       <div>
@@ -36,7 +35,7 @@ export default function InputFileUpload() {
         ) : null}
         <section>
           <form action={setFormState}>
-            <div className="flex flex-none flex-col items-center m-2">
+            <div className="text-center	flex flex-none flex-col items-center m-2">
               <Typography variant="h1" className="text-2xl	">
                 {currentFormState.success && !currentFormState.error
                   ? "Search more"

@@ -1,4 +1,5 @@
 
+import React from "react";
 import Socials from "../socials/socialMedia";
 export default function Footer() {
   return (

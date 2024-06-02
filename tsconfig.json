@@ -10,8 +10,9 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "incremental": true,
+    "jsx": "react",
+    "allowUmdGlobalAccess": true,
     "plugins": [
       {
         "name": "next"
