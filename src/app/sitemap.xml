@@ -1,0 +1,15 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.cleithral.com/</loc>
+    <lastmod>2024-06-02T20:54:38.479Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.cleithral.com/icon.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.cleithral.com/favicon.ico</image:loc>
+    </image:image>
+  </url>
+</urlset>
