@@ -1,5 +1,4 @@
 "use server";
-import { infoType } from "../type/Types";
 import { finalType } from "../type/Types";
 import { fetchType } from "../type/Types";
 

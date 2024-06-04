@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
+import { useMemo } from "react";
 
 
 export default function AnimeText(prop:{text:string}){
-    var [currentState,setState]=useState(prop.text.slice(0,101));
+    var [currentState,setState]=useState("");
+    var CurrentMemo = useMemo(() => setState(prop.text.slice(0, 101)),[prop]);
     if (currentState.length!=prop.text.length) {
         return (
           <Typography variant="body1">

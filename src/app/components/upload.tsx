@@ -32,10 +32,10 @@ export default function Upload() {
           type="file"
           name="image"
           onChange={async (event) => {
-            var file = event.target.files ? event.target.files[0].name : "";
-            var length = event.target.files ? event.target.files.length : 0;
-            var fileType = event.target.files ? event.target.files[0].type : "";
-            var size = event.target.files ? event.target.files[0].size : 0;
+            var file = event.target.files ? event.target.files[0]?.name : "";
+            var length = event.target.files ? event.target.files?.length : 0;
+            var fileType = event.target.files ? event.target.files[0]?.type : "";
+            var size = event.target.files ? event.target.files[0]?.size : 0;
             var result = await checkFile({
               length: length,
               fileType: fileType,
