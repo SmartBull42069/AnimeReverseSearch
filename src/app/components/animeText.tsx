@@ -7,8 +7,9 @@ import { useMemo } from "react";
 
 
 export default function AnimeText(prop:{text:string}){
-    var [currentState,setState]=useState("");
-    var CurrentMemo = useMemo(() => setState(prop.text.slice(0, 101)),[prop]);
+    var [currentState, setState] = useState(prop.text.slice(0, 101));
+    //setState(prop.text)
+    //var CurrentMemo = useMemo(() => setState(prop.text.slice(0, 101)),[prop]);
     if (currentState.length!=prop.text.length) {
         return (
           <Typography variant="body1">
