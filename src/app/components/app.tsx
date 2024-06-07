@@ -7,6 +7,7 @@ import Upload from "./upload";
 import AnimeCard from "./animeCard";
 import { Typography } from "@mui/material";
 import DonationDialog from "./popup";
+import { Suspense } from "react";
 
 export default function InputFileUpload() {
   var [currentFormState, setFormState] = useFormState(getFiles, {
@@ -33,19 +34,21 @@ export default function InputFileUpload() {
             </div>
           </section>
         ) : null}
-        <section>
-          <form action={setFormState}>
-            <div className="text-center	flex flex-none flex-col items-center m-2">
-              <Typography variant="h1" className="text-2xl	">
-                {currentFormState.success && !currentFormState.error
-                  ? "Search more"
-                  : "Upload an anime scene to find the source"}
-              </Typography>
-              <Upload />
-              <Submit />
-            </div>
-          </form>
-        </section>
+        <Suspense fallback={<h1>hello</h1>}>
+          <section>
+            <form action={setFormState}>
+              <div className="text-center	flex flex-none flex-col items-center m-2">
+                <Typography variant="h1" className="text-2xl	">
+                  {currentFormState.success && !currentFormState.error
+                    ? "Search more"
+                    : "Upload an anime scene to find the source"}
+                </Typography>
+                <Upload />
+                <Submit />
+              </div>
+            </form>
+          </section>
+        </Suspense>
       </div>
     </div>
   );

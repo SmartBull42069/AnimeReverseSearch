@@ -20,7 +20,7 @@ export default async function getFiles(
     answer.error = "Please select 1 file";
   }
   else {
-    var req = await fetch(url, {
+    var req =await fetch(url, {
       method: "POST",
       body: form,
     })

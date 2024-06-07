@@ -1,14 +1,15 @@
 import App from "./components/app";
 import Footer from "./components/foot";
-
-
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <div className="bg-myColor">
       <main className=" bg-myColor">
         <div className="mt-2 flex flex-col justify-center min-h-screen	flex-1 items-center">
-          <App />
+          <Suspense fallback={<h1>Hello</h1>}>
+            <App />
+          </Suspense>
         </div>
       </main>
       <Footer></Footer>
@@ -18,7 +19,8 @@ export default function Home() {
 
 export const metadata = {
   generator: "Next.js",
-  applicationName: "Cleithral",
+  applicationName:
+    "Cleithral - Find Anime by Image, GIF, or Video: Your Go-To Anime Search Engine",
   referrer: "origin-when-cross-origin",
 
   keywords: [
