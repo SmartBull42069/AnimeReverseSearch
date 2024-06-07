@@ -19,8 +19,7 @@ export default function Home() {
 
 export const metadata = {
   generator: "Next.js",
-  applicationName:
-    "Cleithral - Find Anime by Image, GIF, or Video: Your Go-To Anime Search Engine",
+  applicationName: "Cleithral",
   referrer: "origin-when-cross-origin",
 
   keywords: [
@@ -42,7 +41,8 @@ export const metadata = {
   authors: "Rayn",
   creator: "Rayn",
   publisher: "Rayn",
-  title: "Cleithral",
+  title:
+    "Cleithral - Find Anime by Image, Video, or GIF: Your Go-To Anime Search Engine",
   description:
     "Discover the name of any anime from a picture, video, or GIF with our advanced recognition tool. Quickly and accurately identify your favorite anime characters and scenes with ease. Try it now!",
 };
