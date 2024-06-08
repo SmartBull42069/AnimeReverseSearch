@@ -61,17 +61,17 @@ export default function Socials(){
           >
             <TikTokIco color="" />
           </Link>
+          <Link
+            target="_blank"
+            href="https://www.facebook.com/VaxMaxx"
+            underline="none"
+          >
+            <FacebookIcon
+              sx={{ fontSize: 40 }}
+            ></FacebookIcon>
+          </Link>
         </div>
-        <Link
-          target="_blank"
-          href="https://www.facebook.com/VaxMaxx"
-          underline="none"
-        >
-          <FacebookIcon
-            className="text-red-600	"
-            sx={{ fontSize: 40 }}
-          ></FacebookIcon>
-        </Link>
+
         <Button
           variant="contained"
           target="_blank"

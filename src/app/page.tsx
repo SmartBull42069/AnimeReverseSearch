@@ -41,8 +41,7 @@ export const metadata = {
   authors: "Rayn",
   creator: "Rayn",
   publisher: "Rayn",
-  title:
-    "Cleithral - Find Anime by Image, Video, or GIF: Your Go-To Anime Search Engine",
+  title: "Cleithral - Anime Search by Image, GIF, or Video",
   description:
     "Discover the name of any anime from a picture, video, or GIF with our advanced recognition tool. Quickly and accurately identify your favorite anime characters and scenes with ease. Try it now!",
 };
