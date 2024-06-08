@@ -56,7 +56,7 @@ export default function Socials(){
           </Link>
           <Link
             target="_blank"
-            href="https://www.tiktok.com/@bigdaddy4206912?_t=8mp4Ny8xRmt&_r=1"
+            href="https://www.tiktok.com/@vaxmaxxm"
             underline="none"
           >
             <TikTokIco color="" />
