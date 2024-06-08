@@ -4,7 +4,7 @@ import XIcon from "@mui/icons-material/X";
 import SvgIcon from "@mui/material/SvgIcon";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
-
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 
 function TikTokIco({ color = "#000000" }) {
@@ -62,6 +62,16 @@ export default function Socials(){
             <TikTokIco color="" />
           </Link>
         </div>
+        <Link
+          target="_blank"
+          href="https://www.facebook.com/VaxMaxx"
+          underline="none"
+        >
+          <FacebookIcon
+            className="text-red-600	"
+            sx={{ fontSize: 40 }}
+          ></FacebookIcon>
+        </Link>
         <Button
           variant="contained"
           target="_blank"
