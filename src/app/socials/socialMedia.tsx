@@ -56,7 +56,7 @@ export default function Socials(){
           </Link>
           <Link
             target="_blank"
-            href="https://www.tiktok.com/@vaxmaxxm"
+            href="https://www.tiktok.com/@vaxmaximum"
             underline="none"
           >
             <TikTokIco color="" />
@@ -66,9 +66,7 @@ export default function Socials(){
             href="https://www.facebook.com/VaxMaxx"
             underline="none"
           >
-            <FacebookIcon
-              sx={{ fontSize: 40 }}
-            ></FacebookIcon>
+            <FacebookIcon sx={{ fontSize: 40 }}></FacebookIcon>
           </Link>
         </div>
 
